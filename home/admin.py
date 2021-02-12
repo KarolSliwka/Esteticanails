@@ -6,7 +6,7 @@ class AdminSocialMediaIcons(admin.ModelAdmin):
     """  """
     list_display = (
         'name',
-        'social_url',
+        'url',
     )
 
     ordering = ('name',)

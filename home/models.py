@@ -3,6 +3,9 @@ from django.db import models
 
 class SocialMedia(models.Model):
     """ Footer social media icons """
+    class Meta:
+        verbose_name_plural = "Social Media's"
+
     Social_Choices = [
         ('Facebook', 'Facebook'),
         ('Instagram', 'Instagram'),
@@ -17,7 +20,7 @@ class SocialMedia(models.Model):
 
     name = models.CharField(max_length=150, null=True,
                             blank=False, choices=Social_Choices)
-    social_url = models.URLField(
+    url = models.URLField(
         max_length=1024, default='', null=True, blank=True)
 
     def __str__(self):
