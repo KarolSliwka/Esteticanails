@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class SocialMediaIcon(models.Model):
+class SocialMedia(models.Model):
     """ Footer social media icons """
     name = models.CharField(max_length=150, null=True, blank=False)
     social_url = models.URLField(

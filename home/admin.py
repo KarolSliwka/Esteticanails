@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SocialMediaIcon
+from .models import SocialMedia
 
 
 class AdminSocialMediaIcons(admin.ModelAdmin):
@@ -12,4 +12,4 @@ class AdminSocialMediaIcons(admin.ModelAdmin):
     ordering = ('name',)
 
 
-admin.site.register(SocialMediaIcon, AdminSocialMediaIcons)
+admin.site.register(SocialMedia, AdminSocialMediaIcons)
