@@ -1,6 +1,18 @@
 from django.db import models
 
 
+class Logotype(models.Model):
+    """ Main page logotype """
+    class Meta:
+        verbose_name_plural = "Logotype"
+
+    name = models.CharField(max_length=150, null=True, default='logotype')
+    image = models.ImageField(upload_to="logotype/", null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
 class SocialMedia(models.Model):
     """ Footer social media icons """
     class Meta:
