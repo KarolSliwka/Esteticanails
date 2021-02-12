@@ -1,20 +1,49 @@
 nav {
     display: inline-flex;
 
-    .navbar-brand {
-        margin: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+    .navbar-nav {
+        display: flex;
+        align-items: center;
 
-    .nav-link {
-        color: $rythm !important;
-        font-weight: 500;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        .navbar-brand {
+            margin: 0;
+            font-size: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
 
-        &:hover {
-            color: $rythm;
+        .nav-link {
+            color: $kobi-d !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            opacity: 0.8;
+            position: relative;
+
+            &:hover {
+                color: $rythm;
+                opacity: 1;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    background: $kobi-d;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 100%;
+                    left: calc(50% - 3px);
+                    animation: pop 0.3s linear 1;
+                }
+            }
+            @keyframes pop {
+                50% {
+                    transform: scale(1.5);
+                }
+            }
+        }
+
+        .link-a {
+            opacity: 1;
         }
     }
 }
