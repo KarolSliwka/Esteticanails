@@ -48,6 +48,10 @@ INSTALLED_APPS = [
 
     # My Apps
     'home',
+    'about',
+    'gallery',
+    'prices',
+    'contact',
 
     # Other Apps
     'storages',
