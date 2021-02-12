@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light py-4">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="#">About Me</a>
+                <a class="nav-link" href="#">Gallery</a>
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{MEDIA_URL}/logotype/logo.png" alt="Estetica Nails">
+                </a>
+                <a class="nav-link" href="#">Price List</a>
+                <a class="nav-link" href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
