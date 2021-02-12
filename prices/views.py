@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def prices(request):
+
+    template = 'prices/prices.html'
+    context = {}
+
+    return render(request, template, context)
