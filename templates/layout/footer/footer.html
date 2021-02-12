@@ -12,7 +12,7 @@
                 <div class="social-media">
                     {% for social in social_media %}
                     <a href="{% if social.url %}{{ social.url }}{% else %}#{% endif %}" {% if social.url %}
-                        target="_blank" {% endif %} rel="noopener noreferrer">
+                        target="_blank" {% endif %} rel="noopener noreferrer" class="px-2">
                         <i class="fab fa-{{ social.name|lower }}"></i></a>
                     {% endfor %}
                 </div>
