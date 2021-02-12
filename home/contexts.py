@@ -1,14 +1,14 @@
 from datetime import datetime
-# from .models import SocialMediaIcon
+from .models import SocialMedia
 
 
-def FooterContext(request):
+def FooterContext():
 
-    # social_media = SocialMediaIcon.objects.all().order_by('name')
+    social_media = SocialMedia.objects.all().order_by('name')
     currentYear = datetime.now().year
 
     context = {
-        # 'social_media': social_media,
+        'social_media': social_media,
         'currentYear': currentYear,
     }
 
