@@ -1,3 +1,15 @@
 from django.contrib import admin
+from .models import SocialMediaIcon
 
-# Register your models here.
+
+class AdminSocialMediaIcons(admin.ModelAdmin):
+    """  """
+    list_display = (
+        'name',
+        'social_url',
+    )
+
+    ordering = ('name',)
+
+
+admin.site.register(SocialMediaIcon, AdminSocialMediaIcons)
