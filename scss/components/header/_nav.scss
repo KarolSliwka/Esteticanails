@@ -26,24 +26,28 @@ nav {
                 &::before {
                     content: "";
                     position: absolute;
-                    top: 0px;
+                    top: 2px;
+                    left: 4px;
                     background: $kobi-d;
                     width: 6px;
                     height: 6px;
                     border-radius: 100%;
-                    left: calc(50% - 3px);
-                    animation: pop 0.3s linear 1;
-                }
-            }
-            @keyframes pop {
-                50% {
-                    transform: scale(1.5);
                 }
             }
         }
+    }
 
-        .link-a {
-            opacity: 1;
+    .link-a {
+        opacity: 1 !important;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            background: $kobi-d;
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
         }
     }
 }

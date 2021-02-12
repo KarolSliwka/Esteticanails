@@ -6,13 +6,13 @@
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" href="#">About</a>
-                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link {% if request.get_full_path == '/about/' %}link-a{% endif %}" href="#">About</a>
+                <a class="nav-link {% if request.get_full_path == '/gallery/' %}link-a{% endif %}" href="#">Gallery</a>
                 <a class="navbar-brand" href="{% url 'home' %}">Estetica Nails
                     <!-- <img src="{MEDIA_URL}/logotype/logo.png" alt="Estetica Nails"> -->
                 </a>
-                <a class="nav-link" href="#">Prices</a>
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link {% if request.get_full_path == '/prices/' %}link-a{% endif %}" href="#">Prices</a>
+                <a class="nav-link {% if request.get_full_path == '/contact/' %}link-a{% endif %}" href="#">Contact</a>
             </div>
         </div>
     </div>
