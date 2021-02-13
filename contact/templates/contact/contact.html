@@ -4,7 +4,27 @@
 {% block extra_title %}{% endblock %}
 
 {% block content %}
-<!-- Main container -->
-<div class="top-margin">
+<!-- Image block -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-4 px-4">
+            <h1 class="title-b">{{ contact_info.title }}</h1>
+            <p class="p-medium">{{ contact_info.promo_text }}</p>
+        </div>
+        <div class="my-4 px-4">
+            <div class="row contact-container">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-0">
+                    <img src="{{ contact_info.image.url }}" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 px-4 py-1 position-relative">
+                    <h4 class="p-medium">Want to contact me directly?</h4>
+                    <p class="p-medium mb-4">Give me a call at {{ contact_info.phone_number }}</p>
+                    <h5 class="p-medium">You can also use below contact form</h5>
+                    <!-- Contact form -->
+                    {% include 'contact/form.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
