@@ -5,6 +5,7 @@ from django.conf import settings
 from django.contrib import messages
 from django.template.loader import render_to_string
 from .forms import ContactForm
+from .models import ContactHeader
 
 
 def contact(request):
@@ -38,9 +39,12 @@ def contact(request):
     else:
         contact_form = ContactForm()
 
+    contact_info = ContactHeader.objects.first()
+
     template = 'contact/contact.html'
     context = {
         'contact_form': contact_form,
+        'contact_info': contact_info,
     }
 
     return render(request, template, context)

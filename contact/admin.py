@@ -1,3 +1,19 @@
 from django.contrib import admin
+from .models import ContactHeader
 
-# Register your models here.
+
+class ContactHeaderAdmin(admin.ModelAdmin):
+    """  """
+    list_display = (
+        'name',
+        'title',
+        'promo_text',
+        'email_address',
+        'phone_number',
+        'image',
+    )
+
+    ordering = ('name',)
+
+
+admin.site.register(ContactHeader, ContactHeaderAdmin)
