@@ -6,11 +6,20 @@
     img {
         width: 100%;
         height: 100%;
-        object-fit: fill;
+        object-fit: cover;
         object-position: center;
         border-radius: 2rem 0 0 2rem;
     }
 }
+
+.phone-number {
+    color: #747474;
+
+    &:hover {
+        color: #747474;
+    }
+}
+
 form {
     .form-control {
         border: none;
@@ -85,8 +94,7 @@ form {
 @media (max-width: 768px) {
     .contact-container {
         img {
-            border-radius: 2rem 2rem 0 0;
-            margin-bottom: 20px;
+            display: none;
         }
     }
 }

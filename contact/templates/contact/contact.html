@@ -18,7 +18,10 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 px-4 py-1 position-relative">
                     <h4 class="p-medium">Want to contact me directly?</h4>
-                    <p class="p-medium mb-4">Give me a call at {{ contact_info.phone_number }}</p>
+                    <p class="p-medium mb-4">Give me a call at
+                        <br class="d-block d-sm-none"><a href="{{ contact_info.phone_number }}" class="phone-number">
+                            {{contact_info.phone_number }}</a>
+                    </p>
                     <h5 class="p-medium">You can also use below contact form</h5>
                     <!-- Contact form -->
                     {% include 'contact/form.html' %}
