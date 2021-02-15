@@ -8,6 +8,7 @@
             {% if slide.image %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
                 <img src="{{ slide.image.url }}" class="d-block" alt="{{ slide.name }}">
+                {% if slide.title %}
                 <div class="carousel-caption d-none d-md-block">
                     <!-- Show title if exists -->
                     {% if slide.title %}
@@ -18,6 +19,7 @@
                     <p class="p-big">{{ slide.text }}</p>
                     {% endif %}
                 </div>
+                {% endif %}
             </div>
             {% endif %}
             {% endfor %}
