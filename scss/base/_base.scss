@@ -1,5 +1,6 @@
 html {
-    height: 100%;
+    position: relative;
+    min-height: 100%;
     width: 100%;
 }
 
@@ -8,6 +9,11 @@ body {
     max-width: 100%;
     font-family: "Josefin Sans", sans-serif;
     background-color: $white-a;
+    margin-bottom: 68px;
+
+    .main-container {
+        padding: 160px 15px 0;
+    }
 }
 
 h1,
