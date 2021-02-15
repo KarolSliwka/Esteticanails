@@ -37,3 +37,21 @@ class SocialMedia(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Slides(models.Model):
+    """ """
+    class Meta:
+        verbose_name_plural = "Slides"
+
+    name = models.CharField(max_length=50, default='New Slide', editable=False)
+    image = models.ImageField(upload_to="carousel/", null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.name:
+            self.name = 'Slide' + str(Slides.objects.count() + 1)
+
+        super(Slides, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
