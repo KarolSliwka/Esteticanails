@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Slides
+from .models import Slide
 
 
 def home(request):
 
-    slides = Slides.objects.all()
+    slides = Slide.objects.all()
 
     template = 'home/index.html'
     context = {

@@ -39,10 +39,11 @@ class SocialMedia(models.Model):
         return self.name
 
 
-class Slides(models.Model):
-    """ """
-    class Meta:
-        verbose_name_plural = "Slides"
+class Slide(models.Model):
+    """ This model will create a slide for the gallery in Home App,
+        each slide will be created with 'Slide' + counter number (1,2,3, etc) 
+        in name, which will be uneditable.
+    """
 
     name = models.CharField(max_length=50, default='Slide ', editable=False)
     image = models.ImageField(
@@ -52,9 +53,9 @@ class Slides(models.Model):
 
     def save(self, *args, **kwargs):
         if self.name:
-            self.name = 'Slide ' + str(Slides.objects.count() + 1)
+            self.name = 'Slide ' + str(Slide.objects.count() + 1)
 
-        super(Slides, self).save(*args, **kwargs)
+        super(Slide, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.name

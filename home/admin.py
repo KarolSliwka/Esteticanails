@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Logotype, SocialMedia, Slides
+from .models import Logotype, SocialMedia, Slide
 
 
 class AdminLogotype(admin.ModelAdmin):
@@ -22,7 +22,7 @@ class AdminSocialMediaIcons(admin.ModelAdmin):
     ordering = ('name',)
 
 
-class AdminSlides(admin.ModelAdmin):
+class AdminSlide(admin.ModelAdmin):
     """ """
     list_display = (
         'name',
@@ -34,4 +34,4 @@ class AdminSlides(admin.ModelAdmin):
 
 admin.site.register(Logotype, AdminLogotype)
 admin.site.register(SocialMedia, AdminSocialMediaIcons)
-admin.site.register(Slides, AdminSlides)
+admin.site.register(Slide, AdminSlide)
