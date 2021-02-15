@@ -44,12 +44,15 @@ class Slides(models.Model):
     class Meta:
         verbose_name_plural = "Slides"
 
-    name = models.CharField(max_length=50, default='New Slide', editable=False)
-    image = models.ImageField(upload_to="carousel/", null=True, blank=True)
+    name = models.CharField(max_length=50, default='Slide ', editable=False)
+    image = models.ImageField(
+        upload_to="images/carousel/", null=True, blank=True)
+    title = models.CharField(max_length=124, null=True, blank=True)
+    text = models.TextField(max_length=1024, null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if self.name:
-            self.name = 'Slide' + str(Slides.objects.count() + 1)
+            self.name = 'Slide ' + str(Slides.objects.count() + 1)
 
         super(Slides, self).save(*args, **kwargs)
 
