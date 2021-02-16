@@ -8,6 +8,12 @@
 <div class="main-container">
     <h1 class="d-none">Gallery</h1>
     {% if gallery.count != 0 %}
+    <div class="container">
+        <!-- Page title -->
+        <h2 class="title-big">Welcome to my work Gallery</h2>
+        <!-- Main text -->
+        <p class="">Here you can find my latest work</p>
+    </div>
     <!-- Iclude Gallery -->
     {% include 'gallery/gallery-floats.html' %}
     {% else %}
