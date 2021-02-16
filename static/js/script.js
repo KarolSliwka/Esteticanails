@@ -26,3 +26,31 @@ $(function () {
 $('#close-button').click(function () {
     $('#imagemodal').modal('hide');
 })
+
+/**
+ * This function will show previous image when clicked on modal
+ */
+$('.carousel-control-prev').on('click', function () {
+    let thisImage = $(this).parent('div').find('img').attr('src');
+    $('.gallery .image-box img').each(function () {
+        if ($(this).attr("src") === thisImage) {
+            let prevImage = $(this).parent().parent().prev().find('img').attr('src');
+            $('.imagepreview').attr('src', prevImage);
+            $('#imagemodal').modal('show');
+        }
+    });
+});
+
+/**
+ * This function will show next image when clicked on modal
+ */
+$('.carousel-control-next').on('click', function () {
+    let thisImage = $(this).parent('div').find('img').attr('src');
+    $('.gallery .image-box img').each(function () {
+        if ($(this).attr("src") === thisImage) {
+            let nextImage = $(this).parent().parent().next().find('img').attr('src');
+            $('.imagepreview').attr('src', nextImage);
+            $('#imagemodal').modal('show');
+        }
+    });
+});
