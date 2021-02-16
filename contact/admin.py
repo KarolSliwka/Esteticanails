@@ -8,7 +8,6 @@ class ContactHeaderAdmin(admin.ModelAdmin):
         'name',
         'title',
         'promo_text',
-        'email_address',
         'phone_number',
         'image',
     )

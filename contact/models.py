@@ -8,8 +8,7 @@ class ContactHeader(models.Model):
     name = models.CharField(
         max_length=100, default='Contact Information', editable=False)
     title = models.CharField(max_length=128)
-    promo_text = models.TextField(max_length=1024, null=False, blank=False)
-    email_address = models.EmailField(max_length=254, null=False, blank=False)
+    promo_text = models.TextField(max_length=1024, null=True, blank=True)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     image = models.ImageField(
         upload_to="images/contact", null=True, blank=True)
