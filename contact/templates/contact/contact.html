@@ -8,7 +8,7 @@
 <div class="main-container">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-4 px-4">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12´">
                 {% if contact_info.title %}
                 <h1 class="title-b">{{ contact_info.title }}</h1>
                 <p class="p-medium">{{ contact_info.promo_text }}</p>
@@ -20,7 +20,7 @@
                 {% endif %}
             </div>
             <div class="my-4 px-4">
-                <div class="row contact-container">
+                <div class="row contact-container mb-5">
                     {% if contact_info.image %}
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-0">
                         <img src="{{ contact_info.image.url }}" alt="">
