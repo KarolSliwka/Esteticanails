@@ -59,6 +59,7 @@
             max-width: calc(100% - 30px);
 
             .modal-body {
+                position: relative;
                 padding: 0.5rem;
 
                 // modal close button
@@ -72,6 +73,30 @@
                     position: absolute;
                     top: 0;
                     right: 0;
+                }
+
+                .carousel-control-prev,
+                .carousel-control-next {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #fff;
+                    position: absolute;
+                    top: calc(50% - 25px);
+                    opacity: 1;
+                    font-size: 2rem;
+                    color: rgba($rythm, 0.65);
+                    border-radius: 0.25rem;
+
+                    &:hover {
+                        color: rgba($rythm, 1);
+                    }
+                }
+
+                .carousel-control-prev-icon,
+                .carousel-control-next-icon {
+                    opacity: 1;
+                    height: 3rem;
+                    width: 3rem;
                 }
             }
         }
