@@ -10,10 +10,19 @@ $(window).scroll(function () {
     }
 })
 
-
+/**
+ * This function will display enlarge image when clicked on Zoom + icon
+ */
 $(function () {
     $('.pop').on('click', function () {
         $('.imagepreview').attr('src', $(this).closest('.image-box').find('img').attr('src'));
         $('#imagemodal').modal('show');
     });
 });
+
+/**
+ * This fucntion will close modal window on click 
+ */
+$('#close-button').click(function () {
+    $('#imagemodal').modal('hide');
+})
