@@ -1,6 +1,10 @@
 .gallery {
     margin-top: 20px;
 
+    .shadow-sm {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05) !important;
+    }
+
     .image-box {
         background: #fff;
         border-radius: 0.5rem;
@@ -44,6 +48,25 @@
 
         &:hover .info-box {
             display: block;
+        }
+    }
+
+    // Modal window style
+    .modal {
+        padding: 0;
+        .modal-dialog {
+            margin: 1rem auto;
+            max-width: calc(100% - 30px);
+
+            .modal-body {
+                padding: 0.5rem;
+
+                // modal close button
+                .close {
+                    position: absolute;
+                    right: 0;
+                }
+            }
         }
     }
 }
