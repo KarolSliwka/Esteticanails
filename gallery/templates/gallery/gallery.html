@@ -6,7 +6,22 @@
 {% block content %}
 <!-- Main container -->
 <div class="main-container">
+    <h1 class="d-none">Gallery</h1>
+    {% if gallery.count != 0 %}
     <!-- Iclude Gallery -->
     {% include 'gallery/gallery-floats.html' %}
+    {% else %}
+    <div class="container no-gallery">
+        <!-- Page title -->
+        <h2 class="title-big">Welcome to my work Gallery</h2>
+        <!-- Main text -->
+        <p class="">Currently, there are no images of my work, sorry. Come back later and check again, please. I will
+            add them soon!</p>
+        <!-- Image -->
+        <div class="col-12 d-flex my-5´">
+            <img src="{{MEDIA_URL}}images/No_image.png" alt="No image available">
+        </div>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}
