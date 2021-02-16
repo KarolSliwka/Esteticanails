@@ -4,7 +4,7 @@ from .models import GalleryImage
 
 def gallery(request):
 
-    gallery = GalleryImage.objects.all()
+    gallery = GalleryImage.objects.all().order_by('-name')
 
     template = 'gallery/gallery.html'
     context = {
