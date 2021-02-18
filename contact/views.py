@@ -39,7 +39,8 @@ def contact(request):
     else:
         contact_form = ContactForm()
 
-    if ContactHeader.objects.count() != 0:
+    if ContactHeader.objects.count != 0:
+        print(ContactHeader.objects.count, 'text')
         contact_info = ContactHeader.objects.first()
         context = {
             'contact_form': contact_form,
