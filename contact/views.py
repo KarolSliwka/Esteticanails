@@ -39,17 +39,16 @@ def contact(request):
     else:
         contact_form = ContactForm()
 
-    if ContactHeader.objects.count != 0:
-        print(ContactHeader.objects.count, 'text')
         contact_info = ContactHeader.objects.first()
-        context = {
-            'contact_form': contact_form,
-            'contact_info': contact_info,
-        }
-    else:
-        context = {
-            'contact_form': contact_form,
-        }
+        if contact_info != None:
+            context = {
+                'contact_form': contact_form,
+                'contact_info': contact_info,
+            }
+        else:
+            context = {
+                'contact_form': contact_form,
+            }
 
     template = 'contact/contact.html'
 
