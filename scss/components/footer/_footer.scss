@@ -39,9 +39,14 @@
         .footer-media {
             text-align: center;
 
+            // order as second on smaller devices
+            .o2nd {
+                order: 2;
+            }
+
             .social-media {
                 text-align: center;
-                margin-top: 10px;
+                margin-bottom: 10px;
             }
         }
     }
