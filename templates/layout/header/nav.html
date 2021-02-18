@@ -11,7 +11,7 @@
                 <a class="nav-link {% if request.get_full_path == '/gallery/' %}link-a{% endif %}"
                     href="{% url 'gallery' %}">Gallery</a>
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    <img src="{{ MEDIA_URL }}/logotype/logo.png" alt="Estetica Nails">
+                    <img src="{{ MEDIA_URL }}logotype/logo.png" alt="Estetica Nails">
                 </a>
                 <a class="nav-link {% if request.get_full_path == '/prices/' %}link-a{% endif %}"
                     href="{% url 'prices' %}">Prices</a>
