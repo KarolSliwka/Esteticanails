@@ -37,22 +37,21 @@ nav {
                     top: 0;
                     left: 0;
                     background: $kobi-d;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 100%;
+                    width: 15px;
+                    height: 2px;
                 }
             }
 
             &:nth-child(2),
             &:nth-child(4) {
                 &::before {
-                    left: calc(50% - 3px);
+                    left: calc(50% - 8px);
                 }
             }
 
             &:nth-child(5) {
                 &::before {
-                    left: calc(100% - 6px);
+                    left: calc(100% - 16px);
                 }
             }
         }
@@ -66,9 +65,8 @@ nav {
             top: 0;
             left: 0;
             background: $kobi-d;
-            width: 6px;
-            height: 6px;
-            border-radius: 100%;
+            width: 15px;
+            height: 2px;
         }
     }
 }
