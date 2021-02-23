@@ -28,6 +28,7 @@
                     {% endif %}
                     <div class="col-xs-12 col-sm-12 {% if contact_info.image %}col-md-6 col-lg-6 col-xl-6{% else %}
                     col-md-12 col-lg-12 col-xl-12{% endif %} mt-3 px-4 py-1">
+                        {% if contact_info.phone_number %}
                         <h4 class="p-medium">Want to contact me directly?</h4>
                         <p class="p-medium mb-4">Give me a call at
                             <br class="d-block d-sm-none"><a href="{{ contact_info.phone_number }}"
@@ -35,6 +36,9 @@
                                 {{contact_info.phone_number }}</a>
                         </p>
                         <h5 class="p-medium">You can also use below contact form</h5>
+                        {% else %}
+                        <h5 class="p-medium">Use below contact form to reach out!</h5>
+                        {% endif %}
                         <!-- Contact form -->
                         {% include 'contact/form.html' %}
                     </div>
