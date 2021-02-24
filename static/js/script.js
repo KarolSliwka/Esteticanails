@@ -4,9 +4,9 @@
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll > 20) {
-        $('#main-nav').addClass('shadow-sm')
+        $('#main-nav').addClass('shadow')
     } else {
-        $('#main-nav').removeClass('shadow-sm')
+        $('#main-nav').removeClass('shadow')
     }
 })
 
