@@ -12,7 +12,7 @@ body {
     margin-bottom: 68px;
 
     .main-container {
-        padding: 160px 15px 0;
+        padding: 160px 0;
     }
 }
 
@@ -80,4 +80,19 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+// Navigation shadow override style
+.shadow {
+    box-shadow: 0 0.25rem 0.5rem rgba($rythm, 0.15) !important;
+}
+
+/* Navigation padding on smaller devices when
+   naviagiotn is changing to dropdown  */
+@media (max-width: 992px) {
+    body {
+        .main-container {
+            padding: 56px 0;
+        }
+    }
 }
